@@ -134,7 +134,7 @@ export const HeroSection = () => {
   <img 
     src="/profile.jpg" 
     alt="Prasanna Hegde" 
-    className="w-full h-full object-cover"
+    className="w-full h-full object-cover object-top"
   />
 </div>
               <div className="absolute -bottom-4 -right-4 w-16 h-16 md:w-20 md:h-20 rounded-full bg-teal flex items-center justify-center shadow-lg">
