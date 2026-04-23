@@ -14,6 +14,7 @@ export interface Project {
   techStack: string[];
   skills: string[];
   featured: boolean;
+  githubUrl?: string;
 }
 
 export const featuredProjects: Project[] = [
@@ -100,6 +101,7 @@ export const featuredProjects: Project[] = [
     techStack: ['Python', 'scikit-learn', 'pandas', 'numpy', 'Streamlit', 'Logistic Regression', 'StandardScaler', 'Feature Engineering', 'Model Persistence'],
     skills: ['Agentic AI', 'Machine Learning', 'Credit Risk Modeling', 'Product Management', 'Data Engineering', 'Feature Engineering', 'Python Development', 'Streamlit UI'],
     featured: true,
+    githubUrl: 'https://github.com/PrasannaHegde11/credit-risk-ai',
   },
   {
     id: 'resume-jd-ai',
@@ -135,6 +137,7 @@ export const featuredProjects: Project[] = [
     techStack: ['Python', 'BERT/SBERT', 'SentenceTransformers', 'spaCy', 'scikit-learn', 'pandas', 'numpy', 'matplotlib', 'seaborn', 'Text Preprocessing'],
     skills: ['Natural Language Processing', 'Transformer Models', 'Product Management', 'AI/ML Pipeline Development', 'Recruitment Domain', 'Feature Engineering', 'Semantic Search'],
     featured: true,
+    githubUrl: 'https://github.com/PrasannaHegde11/resume-jd-ai',
   },
   {
     id: 'urbotask',
