@@ -97,16 +97,33 @@ export const ContactSection = () => {
       contactSchema.parse(formData);
       setIsSubmitting(true);
 
-      // Simulate form submission
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-
-      toast({
-        title: 'Message sent!',
-        description: "Thanks for reaching out! I'll respond within 24 hours.",
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '707c8ed1-7883-402e-83f1-eb8f5067d277',
+          name: formData.name,
+          email: formData.email,
+          subject: `Portfolio Contact [${formData.subject}]: ${formData.name}`,
+          message: formData.message,
+        }),
       });
 
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setErrors({});
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: 'Message sent!',
+          description: "Thanks for reaching out! I'll respond within 24 hours.",
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setErrors({});
+      } else {
+        throw new Error(result.message || 'Submission failed');
+      }
     } catch (error) {
       if (error instanceof z.ZodError) {
         const newErrors: Partial<Record<keyof ContactFormData, string>> = {};
@@ -116,6 +133,12 @@ export const ContactSection = () => {
           }
         });
         setErrors(newErrors);
+      } else if (!(error instanceof z.ZodError)) {
+        toast({
+          title: 'Something went wrong',
+          description: 'Please try again or email me directly at hegdeprasanna11@gmail.com',
+          variant: 'destructive',
+        });
       }
     } finally {
       setIsSubmitting(false);
