@@ -104,7 +104,7 @@ export const Header = () => {
                 className="hidden md:flex gap-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground"
                 asChild
               >
-                <a href="/resume.pdf" download>
+                <a href="/Prasanna_Hegde_Resume.pdf" download>
                   <Download className="h-4 w-4" />
                   Download Resume
                 </a>
@@ -175,7 +175,7 @@ export const Header = () => {
                     className="w-full gap-2 bg-accent text-accent-foreground hover:bg-accent/90"
                     asChild
                   >
-                    <a href="/resume.pdf" download>
+                    <a href="/Prasanna_Hegde_Resume.pdf" download>
                       <Download className="h-4 w-4" />
                       Download Resume
                     </a>
