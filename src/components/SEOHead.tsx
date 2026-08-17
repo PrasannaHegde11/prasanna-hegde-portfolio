@@ -11,11 +11,11 @@ interface SEOHeadProps {
 }
 
 export const SEOHead = ({
-  title = "Prasanna Hegde | AI Product Leader · Digital Identity · UIDAI Aadhaar Sandbox · 18+ Years",
-  description = "AI Product Leader at UIDAI building India's Aadhaar Sandbox. 18+ years delivering AI-powered products, digital identity platforms, and fintech solutions at national scale. $2.1M+ revenue impact. Available for consulting, advisory, and speaking.",
+  title = "Prasanna Hegde | AI Product Leader · Digital Identity · UIDAI Aadhaar Sandbox · 20+ Years",
+  description = "AI Product Leader at UIDAI building India's Aadhaar Sandbox. 20+ years delivering AI-powered products, digital identity platforms, and fintech solutions at national scale. $2.1M+ revenue impact. Available for consulting, advisory, and speaking.",
   keywords = "Prasanna Hegde, Product Manager Bengaluru, AI Product Leader India, Digital Identity Product Manager, Aadhaar Sandbox UIDAI, Agentic AI Product, Machine Learning Product Manager, Fintech Product Leader, API Platform Product, B2B SaaS Product Manager, GDPR Compliance Product, Product Strategy India, 0 to 1 Product, IIM Lucknow Data Science, IBM AI Product Manager",
   ogTitle = "Prasanna Hegde | AI Product Leader · Digital Identity & National-Scale Infrastructure",
-  ogDescription = "Pioneering India's Aadhaar Sandbox at UIDAI. 18+ years building AI-powered products at national scale — from credit risk AI to marketplace platforms. $2.1M+ revenue impact. Available for consulting & advisory.",
+  ogDescription = "Pioneering India's Aadhaar Sandbox at UIDAI. 20+ years building AI-powered products at national scale — from credit risk AI to marketplace platforms. $2.1M+ revenue impact. Available for consulting & advisory.",
   ogType = "website",
   canonicalUrl = "https://www.prasannahegde.biz",
 }: SEOHeadProps) => {
@@ -24,7 +24,7 @@ export const SEOHead = ({
     "@type": "Person",
     "name": "Prasanna Hegde",
     "jobTitle": "Product Lead – Aadhaar Sandbox, UIDAI",
-    "description": "AI Product Leader with 18+ years building national-scale digital identity platforms, AI-powered fintech products, and enterprise solutions. Currently pioneering India's Aadhaar Sandbox at UIDAI.",
+    "description": "AI Product Leader with 20+ years building national-scale digital identity platforms, AI-powered fintech products, and enterprise solutions. Currently pioneering India's Aadhaar Sandbox at UIDAI.",
     "worksFor": {
       "@type": "Organization",
       "name": "UIDAI (Unique Identification Authority of India)"
