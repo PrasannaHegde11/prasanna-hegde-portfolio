@@ -7,7 +7,7 @@ import { MoreProjectsSection } from '@/components/MoreProjectsSection';
 import { MethodologySection } from '@/components/MethodologySection';
 import { CareerSection } from '@/components/CareerSection';
 import { EducationSection } from '@/components/EducationSection';
-import { TestimonialsSection } from '@/components/TestimonialsSection';
+// import { TestimonialsSection } from '@/components/TestimonialsSection'; // Hidden until real testimonials are available
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
 import { BackToTop } from '@/components/BackToTop';
@@ -27,7 +27,7 @@ const Index = () => {
         <MethodologySection />
         <CareerSection />
         <EducationSection />
-        <TestimonialsSection />
+        {/* <TestimonialsSection /> */}
         <ContactSection />
       </main>
       <Footer />
