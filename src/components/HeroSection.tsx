@@ -1,49 +1,12 @@
-import { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, ArrowDown } from 'lucide-react';
+import { MapPin, ArrowDown, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useIntersectionObserver, useCountUp } from '@/hooks/useCountUp';
-
-interface StatProps {
-  value: number;
-  suffix: string;
-  label: string;
-}
-
-const StatCounter = ({ value, suffix, label }: StatProps) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const { hasIntersected } = useIntersectionObserver(ref);
-  const { count, startAnimation } = useCountUp({ end: value, duration: 2000 });
-
-  useEffect(() => {
-    if (hasIntersected) {
-      startAnimation();
-    }
-  }, [hasIntersected, startAnimation]);
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className="text-center p-4"
-    >
-      <div className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-foreground">
-        {count}
-        {suffix}
-      </div>
-      <div className="text-sm md:text-base text-muted-foreground mt-2">{label}</div>
-    </motion.div>
-  );
-};
 
 const stats = [
-  { value: 100, suffix: '+', label: 'Organizations Onboarded' },
-  { value: 250, suffix: 'K+', label: 'API Transactions Processed' },
-  { value: 2.1, suffix: 'M+', label: 'Revenue Generated' },
-  { value: 18, suffix: '+', label: 'Years Product Leadership' },
+  { prefix: '', value: '100+', label: 'Organizations Onboarded' },
+  { prefix: '', value: '250K+', label: 'API Transactions Processed' },
+  { prefix: '$', value: '2.1M+', label: 'Revenue Generated' },
+  { prefix: '', value: '18+', label: 'Years Product Leadership' },
 ];
 
 export const HeroSection = () => {
@@ -79,25 +42,36 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="text-center lg:text-left"
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm mb-6"
-            >
-              <MapPin className="h-4 w-4" />
-              <span>Bengaluru, India</span>
-            </motion.div>
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm"
+              >
+                <MapPin className="h-4 w-4" />
+                <span>Bengaluru, India</span>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.35, duration: 0.5 }}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-teal/20 backdrop-blur-sm rounded-full text-white/90 text-sm border border-teal/30"
+              >
+                <Briefcase className="h-4 w-4 text-teal-light" />
+                <span>Available for Consulting · Advisory · Speaking</span>
+              </motion.div>
+            </div>
 
             <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">
-              Product Strategy & Innovation Lead{' '}
+              Building Products at the Intersection of{' '}
               <span className="block mt-2">
-                <span className="gradient-text">Digital Identity, AI & B2B SaaS</span>
+                <span className="gradient-text">AI, Identity & National Scale</span>
               </span>
             </h1>
 
             <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl lg:max-w-none">
-              Building India's digital identity infrastructure at UIDAI | 18+ years transforming insights into thriving products across 0→1 startups and national-scale platforms
+              Pioneering India's Aadhaar Sandbox at UIDAI — cutting developer onboarding from 6 months to 1 week. 18+ years shipping AI-powered products across fintech, enterprise, and public sector.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -155,8 +129,7 @@ export const HeroSection = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="font-display font-bold text-2xl md:text-3xl lg:text-4xl text-white">
-                  {stat.value < 10 ? `$${stat.value}` : stat.value}
-                  {stat.suffix}
+                  {stat.prefix}{stat.value}
                 </div>
                 <div className="text-xs md:text-sm text-white/70 mt-1">{stat.label}</div>
               </div>
