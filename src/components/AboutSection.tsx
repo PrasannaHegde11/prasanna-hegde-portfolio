@@ -110,13 +110,13 @@ export const AboutSection = () => {
         className="max-w-4xl mx-auto mb-16 space-y-6"
       >
         <p className="text-lg leading-relaxed text-muted-foreground">
-          Strategic product leader with <strong className="text-foreground">18+ years</strong> spanning 0→1 startups and national-scale platforms. Currently pioneering India's first Aadhaar Sandbox at UIDAI, enabling secure digital identity integration for fintechs, government agencies, and enterprises.
+          I don't just manage products — I architect systems that reshape how people, businesses, and governments connect. Right now, I'm pioneering <strong className="text-foreground">India's first Aadhaar Sandbox at UIDAI</strong>, enabling fintechs, government agencies, and enterprises to integrate secure digital identity APIs — and cutting developer onboarding from 6 months to under a week.
         </p>
         <p className="text-lg leading-relaxed text-muted-foreground">
-          Brings end-to-end product expertise—from vision and go-to-market to scale and transition—alongside deep skills in <strong className="text-foreground">API ecosystems, AI/ML integration, enterprise applications, and regulatory platforms</strong>.
+          Across <strong className="text-foreground">18+ years</strong>, I've gone from zero-to-one (co-founding Urbotask, 5,000 users in 6 months) to enterprise transformation (<strong className="text-foreground">$2.1M+ revenue</strong> from GDPR platforms at Infosys) to national-scale infrastructure (250K+ Aadhaar API transactions). My edge: I move fluently between product strategy, hands-on AI prototyping, and regulatory complexity.
         </p>
         <p className="text-lg leading-relaxed text-muted-foreground">
-          Proven track record of launching products that generate <strong className="text-foreground">millions in revenue</strong>, building high-performing teams, and delivering market-disrupting solutions across BFSI, public sector, and SaaS domains.
+          What sets me apart is the rare combination of <strong className="text-foreground">strategic PM thinking and hands-on technical depth</strong> — prototyping AI systems in Python (BERT, CrewAI, Streamlit) on Monday, aligning a regulatory stakeholder on Tuesday, and shipping a developer-facing API on Friday. I thrive where complexity is highest and the stakes are real.
         </p>
       </motion.div>
 
