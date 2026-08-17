@@ -40,7 +40,7 @@ export const CareerSection = () => {
           transition={{ delay: 0.1 }}
           className="section-subtitle"
         >
-          18+ years building products across startups, enterprises, and national platforms
+          20+ years building products across startups, enterprises, and national platforms
         </motion.p>
       </div>
 
