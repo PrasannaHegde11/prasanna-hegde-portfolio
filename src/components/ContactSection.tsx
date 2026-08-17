@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Linkedin, Send, Loader2, Github, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Send, Loader2, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -63,12 +63,6 @@ const contactInfo = [
     label: 'GitHub',
     value: 'PrasannaHegde11',
     href: 'https://github.com/PrasannaHegde11',
-  },
-  {
-    icon: Twitter,
-    label: 'Twitter / X',
-    value: '@prasannahegde',
-    href: 'https://twitter.com/prasannahegde',
   },
 ];
 
