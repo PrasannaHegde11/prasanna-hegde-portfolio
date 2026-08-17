@@ -6,7 +6,7 @@ const stats = [
   { prefix: '', value: '100+', label: 'Organizations Onboarded' },
   { prefix: '', value: '250K+', label: 'API Transactions Processed' },
   { prefix: '$', value: '2.1M+', label: 'Revenue Generated' },
-  { prefix: '', value: '18+', label: 'Years Product Leadership' },
+  { prefix: '', value: '20+', label: 'Years Product Leadership' },
 ];
 
 export const HeroSection = () => {
@@ -71,7 +71,7 @@ export const HeroSection = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl lg:max-w-none">
-              Pioneering India's Aadhaar Sandbox at UIDAI — cutting developer onboarding from 6 months to 1 week. 18+ years shipping AI-powered products across fintech, enterprise, and public sector.
+              Pioneering India's Aadhaar Sandbox at UIDAI — cutting developer onboarding from 6 months to 1 week. 20+ years shipping AI-powered products across fintech, enterprise, and public sector.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -85,7 +85,7 @@ export const HeroSection = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6"
+                className="border-white/30 bg-transparent text-white hover:bg-white/10 text-lg px-8 py-6"
                 asChild
               >
               <a href="/Prasanna_Hegde_Resume.pdf" download="Prasanna_Hegde_Resume.pdf">
