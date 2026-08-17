@@ -9,9 +9,9 @@ const quickLinks = [
 ];
 
 const socialLinks = [
-  { icon: Linkedin, href: 'https://linkedin.com/in/prasannahegde', label: 'LinkedIn' },
+  { icon: Linkedin, href: 'https://linkedin.com/in/hegdeprasanna', label: 'LinkedIn' },
   { icon: Mail, href: 'mailto:hegdeprasanna11@gmail.com', label: 'Email' },
-  { icon: Github, href: 'https://github.com/prasannahegde', label: 'GitHub' },
+  { icon: Github, href: 'https://github.com/PrasannaHegde11', label: 'GitHub' },
 ];
 
 export const Footer = () => {
