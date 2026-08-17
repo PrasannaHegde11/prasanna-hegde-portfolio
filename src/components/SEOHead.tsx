@@ -11,29 +11,36 @@ interface SEOHeadProps {
 }
 
 export const SEOHead = ({
-  title = "Prasanna Hegde - Product Leader (Platform) - Regulated Systems, Digital Identity & Trust Infrastructure | UIDAI Aadhaar Sandbox |Ex-Infosys",
-  description = "Product Strategy & Innovation Lead at UIDAI with 18+ years building AI-powered products, digital identity platforms, and fintech solutions. 100+ organizations onboarded, $2.1M+ revenue generated. Expert in Agentic AI, Machine Learning, API platforms, GDPR compliance, and marketplace development.",
-  keywords = "Product Manager, Product Leader, Agentic AI, Machine Learning, NLP, Credit Risk AI, Resume Screening AI, Digital Identity, Aadhaar, UIDAI, Fintech, API Platform, B2B SaaS, Marketplace, GDPR, Data Governance, CRM, Telecom, Bangalore, India, Product Strategy, 0 to 1 Product",
-  ogTitle = "Prasanna Hegde | Product Leader - AI, Digital Identity & Fintech",
-  ogDescription = "Building India's Aadhaar Sandbox at UIDAI. 18+ years creating AI-powered products: Credit Risk AI, Resume-JD Matching, Marketplace Platforms. $2.1M+ revenue impact.",
+  title = "Prasanna Hegde | AI Product Leader · Digital Identity · UIDAI Aadhaar Sandbox · 18+ Years",
+  description = "AI Product Leader at UIDAI building India's Aadhaar Sandbox. 18+ years delivering AI-powered products, digital identity platforms, and fintech solutions at national scale. $2.1M+ revenue impact. Available for consulting, advisory, and speaking.",
+  keywords = "Prasanna Hegde, Product Manager Bengaluru, AI Product Leader India, Digital Identity Product Manager, Aadhaar Sandbox UIDAI, Agentic AI Product, Machine Learning Product Manager, Fintech Product Leader, API Platform Product, B2B SaaS Product Manager, GDPR Compliance Product, Product Strategy India, 0 to 1 Product, IIM Lucknow Data Science, IBM AI Product Manager",
+  ogTitle = "Prasanna Hegde | AI Product Leader · Digital Identity & National-Scale Infrastructure",
+  ogDescription = "Pioneering India's Aadhaar Sandbox at UIDAI. 18+ years building AI-powered products at national scale — from credit risk AI to marketplace platforms. $2.1M+ revenue impact. Available for consulting & advisory.",
   ogType = "website",
-  canonicalUrl = "https://prasannahegde.com",
+  canonicalUrl = "https://www.prasannahegde.biz",
 }: SEOHeadProps) => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Prasanna Hegde",
-    "jobTitle": "Product Strategy & Innovation Lead",
-    "description": "Product Manager specializing in AI/ML, Digital Identity, and Fintech",
+    "jobTitle": "Product Lead – Aadhaar Sandbox, UIDAI",
+    "description": "AI Product Leader with 18+ years building national-scale digital identity platforms, AI-powered fintech products, and enterprise solutions. Currently pioneering India's Aadhaar Sandbox at UIDAI.",
     "worksFor": {
       "@type": "Organization",
-      "name": "UIDAI"
+      "name": "UIDAI (Unique Identification Authority of India)"
     },
-    "alumniOf": ["IIM Lucknow", "Institute of Product Leadership", "Coventry University"],
-    "knowsAbout": ["Product Management", "Agentic AI", "Machine Learning", "Digital Identity", "API Platforms", "Fintech", "GDPR"],
+    "alumniOf": [
+      { "@type": "EducationalOrganization", "name": "IIM Lucknow" },
+      { "@type": "EducationalOrganization", "name": "Institute of Product Leadership" },
+      { "@type": "EducationalOrganization", "name": "Coventry University" }
+    ],
+    "knowsAbout": ["Product Management", "Agentic AI", "Machine Learning", "Digital Identity", "Aadhaar", "API Platforms", "Fintech", "GDPR", "B2B SaaS", "Product Strategy"],
+    "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN" },
     "url": canonicalUrl,
     "sameAs": [
-      "https://linkedin.com/in/prasannahegde"
+      "https://www.linkedin.com/in/hegdeprasanna/",
+      "https://github.com/PrasannaHegde11",
+      "https://twitter.com/prasannahegde"
     ]
   };
 
@@ -47,9 +54,8 @@ export const SEOHead = ({
       <meta name="author" content="Prasanna Hegde" />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={canonicalUrl} />
-{/* Favicon - Text-based with initials */}
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='%230d9488'>PH</text></svg>" />
-
+      {/* Favicon - Text-based with initials */}
+      <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90' fill='%230d9488'>PH</text></svg>" />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
@@ -63,6 +69,7 @@ export const SEOHead = ({
       <meta name="twitter:url" content={canonicalUrl} />
       <meta name="twitter:title" content={ogTitle} />
       <meta name="twitter:description" content={ogDescription} />
+      <meta name="twitter:creator" content="@prasannahegde" />
 
       {/* Structured Data */}
       <script type="application/ld+json">
